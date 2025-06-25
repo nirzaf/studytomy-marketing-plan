@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FDFBF8;
+}
+
+.tab-active {
+  border-bottom-color: #4A5568;
+  color: #2D3748;
+  font-weight: 600;
+}
+
+.tab-inactive {
+  border-bottom-color: transparent;
+  color: #718096;
+}
+
+.kpi-card {
+  background: linear-gradient(145deg, #ffffff, #f0f0f0);
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.timeline-dot {
+  @apply absolute -left-3 w-6 h-6 bg-blue-500 rounded-full border-4 border-white;
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 300px;
+}
+
+@media (min-width: 768px) {
+  .chart-container {
+    height: 350px;
+  }
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white hover:bg-blue-700 px-4 py-2 rounded-md font-medium transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 text-gray-700 hover:bg-gray-300 px-4 py-2 rounded-md font-medium transition-colors duration-200;
+}
+
+.btn-secondary.active {
+  @apply bg-gray-600 text-white;
+}
+
+.competitor-btn {
+  @apply text-sm bg-white border border-gray-300 hover:bg-gray-100 text-gray-700 font-medium py-1 px-3 rounded-full transition-colors duration-200;
+}
+
+.competitor-btn.active {
+  @apply bg-blue-200 border-blue-500;
+}
